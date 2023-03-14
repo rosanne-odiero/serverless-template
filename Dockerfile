@@ -11,6 +11,11 @@ RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+# Add model files
+ADD model.py .
+ADD pytorch_model.py .
+ADD pytorch_model_weights.onnx .
+
 # We add the banana boilerplate here
 ADD server.py .
 
